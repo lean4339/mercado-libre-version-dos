@@ -1,0 +1,34 @@
+
+        
+
+              <%- include("partials/head") %>
+              <body>
+                  <%- include("partials/header")%>
+                      <div class="container">
+                        <section class="row">
+                            <div class="titulo col-12">
+                                <h2>Detalle del producto: <%=producto.name%></h2>
+                            </div>
+                          <div>
+                              <article id="contenido" class="contenido">
+                                  <div class="imagen">
+                                      <img src="/images/products/<%=producto.image%>" alt="">
+                                      <p><%=producto.description%></p>
+                                  </div>
+                                  <div class="precio">
+                                      <p class="grande"><%=producto.name%></p>
+                                      <p class="verde">$<%=toThousand(producto.price)%> <% if (producto.discount > 0) { %>
+                                        <%= producto.discount%> %
+                                      <% } %> </p>
+                                      <p class="ultraGrande">$<%= toThousand(producto.price - producto.price*(producto.discount/100))%></p>
+                                      <p class="opciones"><i class="fas fa-card"></i>Pagá en 12 cuotas sin interés</p>
+                                      <p class="opciones">Retirá gratis en los locales del vendedor</p>
+                                      <button>Comprar ahora</button>
+                                  </div>
+                              </article>
+                          </div>
+                  </section>
+                  </div>
+                  <%- include("partials/footer")%>
+              </body>
+              </html>   

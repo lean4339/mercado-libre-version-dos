@@ -1,0 +1,355 @@
+*{
+  margin:0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root{
+  --Amarillo: #EAC926;
+--Azul: #03264C;
+--Celeste: #1259c3;
+--GrisOscuro: #666666;
+--GrisClaro: #ebebeb;
+--Verde: #39b54a;
+}
+body{
+  background-color: var(--GrisClaro);
+}
+a{
+  text-decoration: none;
+  color: black;
+
+}
+a:hover{
+  color:white;
+  text-decoration: none;
+}
+
+header{
+  background-color: var(--Amarillo);
+  padding: 10px;
+  
+}
+header .logo{
+  height: 40px;
+  background-image: url('/images/logo-ml.jpeg');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+header .logo a img{
+  height: 100%;
+}
+header .input-search{
+  background-color: white;
+  border-radius: 2px;
+  padding: 5px;
+  width: 100%;
+  position: relative;
+  height: 40px;
+  
+}
+header .search-container{
+  padding: 0;
+}
+header .input-search input[type="text"]{
+  border: none;
+  outline: none;
+  
+}
+header .input-search input::placeholder{
+  color: var(--GrisOscuro);
+}
+header .input-search button{
+  border: none;
+  outline: none;
+  background-color: white;
+  color: var(--GrisOscuro);
+  border-left: 1px solid var(--GrisClaro);
+  position:absolute;
+  right: 2px;
+  font-size: .8em;
+  height: 60%;
+  width: 12%;
+}
+/*hay dos header nav. corregir*/
+header nav{
+  margin-bottom: 10px;
+}
+header .row{
+  width: 100%;
+  margin: 0;
+}
+header .cuotas{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 15px 5px 0;
+}
+header .cuotas p{
+  margin-left: 3px;
+}
+header nav{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+header nav button.burger {
+  background-color: var(--Azul);
+  border: none;
+  border-radius: 4px;
+  padding: 3px 15px;
+}
+header nav button.burger:focus{
+  outline: 1px solid white;
+}
+header nav button.burger i{
+  color: white;
+
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 30px;
+}
+/*parte del banner*/
+.banner img {
+  width: 100%;
+  display: none;
+}
+/*productos */
+section article{
+  border-top: 1px solid var(--GrisClaro);
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+
+}
+section .titulo{
+  color: var(--GrisOscuro);
+  font-size: 24px;
+  margin: 30px 0;
+}
+section article .contenido{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;  
+  background-color: white;
+
+}
+section .contenido figure img{
+  width: 100%;
+}
+section.producto{  
+  background-color: rgb(133, 108, 108);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+section .contenido article{
+  padding: 10px;
+
+}
+section .contenido article span{
+  padding: 7px
+}
+section .contenido article i, section .contenido article span{
+  color: var(--Verde);
+}
+section .contenido article i{
+  position: absolute;
+  right: 18px;
+  top: -15px;
+  border: 1px solid var(--Verde);
+  width: 27px;
+  height: 27px;
+  border-radius: 20px;
+  padding: 4px;
+
+}
+section .contenido .detalle{
+  margin: 0 10px 10px 10px;
+}
+
+/*empezamos el footer*/
+.footer{
+  padding: 20px;
+  background-color: white;
+  margin-top: 30px;
+
+}
+.footer article{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer article i{
+  color: var(--Celeste);
+  font-size: 35px;
+  display: flex;
+  margin: 10px 0;
+
+}
+.footer article h4, .footer article p{
+  color: var(--GrisOscuro);
+  display: flex;
+  margin: 20px 0;
+}
+.copyright{
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid var(--GrisClaro);
+  border-bottom: 1px solid var(--GrisClaro);
+  color: var(--GrisOscuro)
+}
+.detalle{
+  display: none;
+  transition: 1s all;
+}
+.activo{
+  display: block;
+}
+.precio{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  width: 100%;
+  background-color: white;
+}
+.precio p{
+  text-align: start;
+  margin: 10px 0;
+  
+}
+.precio p, .precio button{
+  margin-top: 30px;
+}
+.precio .verde{
+  color: var(--Verde);
+  font-size: 1em;
+}
+.precio p.grande{
+  font-size: 2em;
+}
+.precio p.ultraGrande{
+  font-size: 4em;
+}
+.precio p.opciones{
+  font-weight: 500;
+  color: var(--GrisOscuro);
+}
+.precio button{
+  background-color: var(--Celeste);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.imagen img{
+  width: 100%;
+  object-fit: contain;
+}
+.imagen{
+  background-color: white;
+  border-right: 1px solid var(--GrisClaro);
+}
+#contenido{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/*cada grupo llamado tarjetas hace las veces de foto en el slider y se va cambiando segun apretes los botones*/
+.tarjetas{
+  width: 100%;
+  display: flex;
+  gap:5%;
+
+}
+/*el width en la tarjeta es para que las que entran en grupos menores a cuatro entren juntas y queden lindas*/
+.tarjeta{
+  width: 25%;
+  background-color: white;
+}
+.tarjeta img{
+  width: 100%;
+  height: 200px;
+}
+/*estas medidas es para que el carousel quede fijo y no cambie el tamaño*/
+.carousel{
+  width: 100vw;
+  height: 50vh;
+}
+/*Medias querys*/
+/*TABLET*/
+@media(min-width:426px){
+  .row{
+    padding: 0 10px;
+  }
+  header .cuotas{
+    margin: 0;
+    text-align: end;
+    padding: 0;
+  }
+  
+  header .cuotas p{
+    margin: 0;
+    line-height: 20px;
+    width: 80%;
+    position: relative;
+    right: -14px;
+  }
+
+  header .cuotas i{
+    position: relative;
+    left: 40px;
+    top: 4px;
+  }
+
+  header ul li {
+      justify-content: space-between;
+      padding-right: 12px;
+  }
+  header ul.usuario li:last-child {
+      padding-right: 0;
+  }
+  .banner img{
+    display: block;
+  }
+  #contenido{
+    flex-direction: row;
+  }
+}
+
+/*ESCRITORIO*/
+@media(min-width:1024px) {
+  header .cuotas{
+
+    align-items: center;
+  }  
+  header .cuotas p{
+    width: 100%;
+    right: 0px;
+  }
+  header .cuotas i{
+    left: 18px;
+    top: 0;
+  }
+  footer article h4 {
+    font-size: 1.3rem;
+  }
+  footer article p {
+    font-size: 0.9rem;
+  }
+  footer .copyright {
+    font-size: 0.7rem;
+  }
+  
+}
